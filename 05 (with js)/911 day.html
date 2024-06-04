@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>날짜 계산기</title>
+</head>
+<body>
+    <div>
+    <h1>날짜 계산기</h1>
+    <p>
+        개강한지
+        <span id="result"></span>일 되었습니다.
+    </p>
+    <p>축하합니다!</p>
+    </div>
+
+    <script>
+    const start = prompt("시작 날짜 입력");
+    const today = prompt("오늘 날짜 입력");
+
+    const now = new Date(today);
+    const firstDay = new Date(start);
+
+      const toNow = now.getTime(); // 오늘까지 지난시간(밀리초)
+      const toFirst = firstDay.getTime(); // 첫날까지 지난시간(밀리초)
+    let passedTime = toNow - toFirst;
+
+      passedTime = Math.round(passedTime / (1000 * 60 * 60 * 24));
+
+    document.getElementById("result").innerHTML = passedTime;
+    </script>
+</body>
+</html>

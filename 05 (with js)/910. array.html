@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array배열</title>
+  </head>
+  <body>
+    <script>
+      const number = ["하나", "둘", "셋", "넷", "다섯", "여섯", "일곱", "여덟"];
+
+      const number1 = ["아홉", "열", "열하나"];
+
+      const number2 = number.concat(number1);
+      document.write(`${number2} <br>`);
+
+      for (let i = 0; i < number.length; i++) {
+        document.write(number[i]);
+      }
+    </script>
+  </body>
+</html>

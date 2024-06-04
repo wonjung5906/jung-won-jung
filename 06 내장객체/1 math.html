@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math 객체</title>
+</head>
+<body>
+    <p id="show"></p>
+
+    <script>
+      // min() 최소값 반환
+      // max() 최대값 반환
+    let minValue = Math.min(5, 12, 31, 2, 8);
+    let maxValue = Math.max(-9, 2, 21, 51, -30);
+
+    let textMinMax = "";
+    textMinMax = `최소값: ${minValue} <br> 최대값: ${maxValue}`;
+
+    document.getElementById("show").innerHTML = textMinMax;
+      // abs() 절대값 반환
+    const a = Math.abs(-8.3);
+    const b = Math.abs(-2);
+    const c = Math.abs("a");
+    const d = Math.abs(6);
+
+    let textAbs = "";
+    textAbs = `${a} <br> ${b} <br> ${c} <br> ${d}`;
+    document.getElementById("show").innerHTML = textAbs;
+      // round() 반올림한 정수 값 반환
+    const e = Math.round(5.8);
+    const f = Math.round(5.45);
+    const g = Math.round(-3.78);
+    const h = Math.round(-3.1);
+
+    let textRound = "";
+    textRound = `${e}<br>${f}<br>${g}<br>${h}`;
+
+    document.getElementById("show").innerHTML = textRound;
+      // floor() 무조건 내림한 정수 값 반환
+      // ceil() 무조건 올림한 정수 값 반환
+      // pow() 거듭제곱 값 반환
+      // sqrt() 제곱근 값 반환
+      // log() 로그 값 반환
+      // random() 0~1 사이의 무작위 부동 소수점 숫자 반환
+    const i = Math.random();
+    const j = Math.random();
+      // 1에서 100까지의 정수 중 무작위 숫자 하나를 반환
+      const k = Math.floor(i * 45 + 1);
+      const l = Math.floor(j * 45 + 1);
+
+    let textRandom = "";
+    textRandom = `${k}<br>${l}`;
+
+    document.getElementById("show").innerHTML = textRandom;
+    </script>
+</body>
+</html>

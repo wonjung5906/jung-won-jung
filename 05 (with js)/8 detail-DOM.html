@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상세보기</title>
+    <style>
+      #wrap {
+        position: relative;
+        width: 500px;
+        padding: 15px 20px;
+        margin: 0 auto;
+      }
+      button {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px solid #ccc;
+        font-size: 14px;
+        padding: 5px;
+      }
+      .over {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+      }
+      .detail {
+        width: 400px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <img src="images/flower.jpg" alt="이미지" />
+      <button class="over" id="open">상세 설명보기</button>
+      <div class="detail" id="desc">
+        <h4>Lorem, ipsum.</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+          architecto tenetur? Id praesentium blanditiis dolorum quia temporibus,
+          laboriosam tenetur facilis aliquam ullam voluptates iusto, quod iure
+          optio repudiandae in aspernatur?
+        </p>
+        <button id="close">상세 설명 닫기</button>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector("#open").onclick = function () {
+        document.querySelector("#desc").style.display = "block";
+        document.querySelector("#open").style.display = "none";
+      };
+      document.querySelector("#close").onclick = function () {
+        document.querySelector("#desc").style.display = "none";
+        document.querySelector("#open").style.display = "block";
+      };
+    </script>
+  </body>
+</html>

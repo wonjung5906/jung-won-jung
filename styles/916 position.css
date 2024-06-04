@@ -1,0 +1,60 @@
+p {
+    width: 500px;
+    height: 200px;
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    line-height: 2;
+}
+.p1 {
+    /* 문서의 흐름에 맞춰 배치, 기본값 */
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+}
+.p2 {
+    /* 위치 값을 지정할 수 있다. 그외 static과 동일 */
+    position: relative;
+}
+
+.p3 {
+    position: relative;
+    top: -50px;
+    left: 100px;
+}
+
+.fixed {
+    width: 300px;
+    height: 100px;
+    background-color: #222;
+    /* position: fixed;
+    top: 30px;
+    right: 30px; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contents {
+    position:relative;
+    background: url("/images/꽃.jpg") center no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 120px;
+    text-shadow: 2px 2px 0 gray;
+}
+
+
+
+
+
+
+
+

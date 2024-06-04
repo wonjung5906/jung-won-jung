@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조가상클래스</title>
+    <style>
+        .contents {
+            width: 300px;
+        }
+        .contents :nth-child(2n) {
+            background-color: aquamarine;
+        }
+        .hot::after {
+            content: "HOT";
+            font-size: 10px;
+            padding: 2px 4px;
+            margin: 0px 10px;
+            border-radius: 2px;
+            background-color: red;
+            color:#fff
+        }
+        .icon::before {
+            /* 이미지를 넣을땐 content: ""; 꼭 명시 */
+            content: "ICON";
+            background: url("images/꽃.jpg") center no-repeat;
+            background-size: contain;
+            position: absolute;
+            top:0;
+            left:0;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, inventore.</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, inventore.</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, inventore.</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, inventore.</p>
+    </div>
+    <div class="container">
+        <h1>제품 목록</h1>
+        <ul>
+            <li class="hot">제품1</li>
+            <li>제품2</li>
+            <li>제품3</li>
+            <li>제품4</li>
+        </ul>
+        <div class="icon">제품5</div>
+    </div>
+</body>
+</html>

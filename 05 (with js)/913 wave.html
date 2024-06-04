@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>물결 효과</title>
+</head>
+<style>
+    html,
+    body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #303848;
+    }
+    .ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+        circle closest-side,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0) 70%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: ripple-animation 1.8s ease;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1),
+        0 0 30px rgba(0, 0, 0, 0.1);
+      /* pointer-events: none; */
+    }
+
+    @keyframes ripple-animation {
+    from {
+        transform: scale(0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+    }
+</style>
+<body>
+    <script>
+    document.addEventListener("mousemove", function (e) {
+        let ripple = document.createElement("div");
+        ripple.className = "ripple";
+        document.body.appendChild(ripple);
+
+        ripple.style.left = `${e.clientX - 80}px`;
+        ripple.style.top = `${e.clientY - 80}px`;
+
+        ripple.addEventListener("animationend", () => {
+        ripple.parentElement.removeChild(ripple);
+        });
+    });
+    </script>
+</body>
+</html>

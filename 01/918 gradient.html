@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선형 그라데이션</title>
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .gradient1 {
+            background-color: aqua;
+            /* 완쪽 위에서 오름쪽 아래 방향으로 파랑에서 흰색으로 */
+            background: linear-gradient(to right bottom, blue, white);
+        }
+
+        .gradient2 {
+            background-color:violet;
+            /* 완쪽 위에서 오름쪽 아래 방향으로 파랑에서 흰색으로 */
+            background: linear-gradient(45deg, red, white);
+        }
+
+        .gradient3 {
+            background-color:rgb(44, 255, 125);
+            /* 완쪽 위에서 오름쪽 아래 방향으로 파랑에서 흰색으로 */
+            background: linear-gradient(45deg, yellow, coral 30%);
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="gradient1"></div>
+    <div class="gradient2"></div>
+    <div class="gradient3"></div>
+</body>
+</html>

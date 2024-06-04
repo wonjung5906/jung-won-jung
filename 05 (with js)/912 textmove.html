@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text move</title>
+    <style>
+    html,
+    body {
+        height: 200%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+    </style>
+</head>
+<body>
+    <div id="textTop" class="text">위쪽 텍스트 - 오른쪽으로 이동</div>
+    <div id="textBottom" class="text">아래쪽 텍스트 - 왼쪽으로 이동</div>
+
+    <script>
+    document.addEventListener("scroll", function () {
+        const scrollAmount = window.scrollY;
+        const textTop = document.getElementById("textTop");
+        const textBottom = document.getElementById("textBottom");
+
+        textTop.style.transform = `translateX(${scrollAmount * 1}px)`;
+        textBottom.style.transform = `translateX(-${scrollAmount * 1}px)`;
+    });
+    </script>
+</body>
+</html>

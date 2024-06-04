@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform: rotate</title>
+    <style>
+        #container {
+            width: 800px;
+            margin: 20px auto;
+        }
+        .origin {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin:40;
+        }
+        .origin img {
+            width: 100px;
+            height: 100px;
+        }
+        #rotate1:hover {
+            transform: rotate(45deg);
+        }
+        #rotate2:hover {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="origin" id="rotate1">
+            <img scr="/02/펭귄.jpg" alt="icon">
+        <div class="origin" id="rotate2">
+            <img scr="/02/펭귄.jpg" alt="icon">    
+        </div>
+    </div>
+</body>
+</html>

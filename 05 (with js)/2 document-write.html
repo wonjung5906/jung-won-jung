@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document-write</title>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+
+    <script>
+        const name = prompt("이름을 입력하세요.")
+        document.write(`<p><big>$(name)</big>님, 환영합니다.</p>`);
+
+        const now = new Date();
+        // console.log(now);
+        
+        const display = now.toLocaleTimeString();
+         // console.log(display);
+        
+        document.write(`현재시각은 $(display)`);
+    
+    </script>
+</body>
+</html>

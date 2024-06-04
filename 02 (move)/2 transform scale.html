@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform: scale</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 200px;
+            margin: 20px auto;    
+        }
+        .origin {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000; 
+            float: left;
+            margin: 40px;
+        }
+        .origin > div {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .move1:hover {
+            transform:scaleX(1.5);
+        }
+
+        .move2:hover {
+            transform:scaleY(1.5);
+        }
+        
+        .move3:hover {
+            transform:scale(0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="origin">
+            <div class="move1"></div>
+        <div class="origin">
+            <div class="move2"></div>
+        <div class="origin">
+            <div class="move3"></div>           
+        </div>
+    </div>
+</body>
+</html>

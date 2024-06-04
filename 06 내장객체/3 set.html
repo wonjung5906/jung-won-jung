@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set 객체</title>
+  </head>
+  <body>
+    <p id="show"></p>
+
+    <script>
+      // Set 객체는 요소들이 중복되지 않는 유일한 값을 가진 집합
+      // Set 객체는 수학에서 집합의 개념과 유사
+      // 요소가 중복된 값을 가지지 않는다.
+      // 요소에는 순서가 없다.
+      // 인덱스를 사용하지 않는다.
+
+      // set 객체 생성
+      const set1 = new Set([2, 3, 5, 5, 7, 7]);
+
+      let text = "";
+      for (let value of set1) {
+        text += `${value}<br>`;
+      }
+
+      document.getElementById("show").innerHTML = text;
+
+      // add() 메서드
+      // 빈 Set 객체를 생성
+      const set2 = new Set();
+      set2.add("사과");
+      set2.add("수박");
+      set2.add("오렌지");
+
+      set2.forEach((value) => {
+        text += `${value}<br>`;
+      });
+
+      document.getElementById("show").innerHTML = text;
+
+      // has() 메서드
+      // Set 객체의 특정 요소의 존재 여부를 판단
+      text += set2.has("사과") + "<br>";
+      text += set2.has("멜론") + "<br>";
+
+      document.getElementById("show").innerHTML = text;
+
+      // delete() 메서드
+      set2.delete("사과");
+      set2.forEach((value) => {
+        text += `${value}<br>`;
+      });
+
+      document.getElementById("show").innerHTML = text;
+    </script>
+  </body>
+</html>

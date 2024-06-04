@@ -1,0 +1,14 @@
+* {
+    margine: 0;
+    padding: 0;
+}
+
+h1 {color:aqua;}
+
+.accent {background-color: blue;
+        border: 1px solid #fff;
+        padding: 5px;}
+
+h1,p {text-align: center;}
+
+.container {background-color: burlywood;}

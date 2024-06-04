@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map 객체</title>
+</head>
+<body>
+    <p id="show"></p>
+
+    <script>
+      // Map객체는 키-값으로 구성된 자료 구조
+      // Map객체는 Set객체와 달리 요소에 순서가 있다.
+    const fruits = new Map([
+        ["사과", 10],
+        ["오렌지", 20],
+        ["수박", 30],
+    ]);
+
+    let text = "";
+    fruits.forEach((value, key) => {
+        text += `${key}: ${value}<br>`;
+    });
+    document.getElementById("show").innerHTML = text;
+    </script>
+</body>
+</html>

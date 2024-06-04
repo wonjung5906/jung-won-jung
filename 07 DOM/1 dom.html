@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <form name="form1">
+      <input type="text" name="name" />
+      <button onclick="getName()">등록</button>
+    </form>
+
+    <p id="show"></p>
+
+    <script>
+      const getName = () => {
+        let text = document.form1.name.value;
+        alert(text);
+      };
+    </script>
+  </body>
+</html>

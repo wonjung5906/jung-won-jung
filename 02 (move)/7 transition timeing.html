@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition timeing fnc </title>
+    <style>
+        #container div {
+            width: 100px;
+            height: 50px;
+            margin: 5px 10px;
+            padding: 5px;
+            color:aqua;
+            background-color:chartreuse;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            float: left;}
+
+        #container:hover div {
+            height: 400;}
+
+        #container .ease {
+            transition: ease 3s;}
+
+        #container .linear {
+            transition: linear 3s;}
+
+        #container .ease-in {
+            transition: ease-in 3s;}
+
+        #container .ease-out {
+            transition: ease-out 3s;}
+
+        #container .ease-in-out {
+            transition: ease-in-out 3s;}
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+      <div class="ease">ease</div>
+      <div class="linear">linear</div>
+      <div class="ease-in">ease-in</div>
+      <div class="ease-out">ease-out</div>
+      <div class="ease-in-out">ease-in-out</div>
+    </div>
+</body>
+</body>
+</body>
+</body>
+</body>
+</html>

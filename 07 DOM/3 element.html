@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 요소 선택</title>
+  </head>
+  <body>
+    <!-- 요소의 id 이용 -->
+    <p id="p1">안녕하세요!</p>
+    <button onclick="changeColor('red')">빨강</button>
+    <button onclick="changeColor('blue')">파랑</button>
+
+    <script>
+      const changeColor = (newColor) => {
+        const element = document.getElementById("p1");
+        element.style.color = newColor;
+      };
+    </script>
+
+    <!-- HTML 태그 이름으로 요소 선택 -->
+    <div id="parent">
+      <p>안녕1</p>
+      <p>안녕2</p>
+      <p>안녕3</p>
+      <p>안녕4</p>
+      <p>안녕5</p>
+    </div>
+    <p id="show"></p>
+
+    <script>
+      const element = document.getElementById("parent");
+      const p = element.getElementsByTagName("p");
+
+      p[2].style.color = "red";
+    </script>
+
+    <!-- 클래스 이름으로 요소 선택하기 -->
+    <div id="parent1">
+      <p>안녕6</p>
+      <p class="a">안녕7</p>
+      <p class="a">안녕8</p>
+      <p class="a">안녕9</p>
+    </div>
+
+    <script>
+      const element1 = document.getElementById("parent1");
+      const a = element1.getElementsByClassName("a");
+      console.log(a);
+
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.color = "blue";
+      }
+    </script>
+
+    <!-- CSS 선택자로 요소 선택하기 -->
+    <script>
+      const x = document.querySelector("p.a");
+      x.style.backgroundColor = "red";
+    </script>
+
+    <h1 id="title">글 제목</h1>
+    <p>단락1</p>
+    <ul>
+      <li>항목1</li>
+      <li class="item">항목2</li>
+      <li class="item">항목3</li>
+      <li class="item">항목4</li>
+    </ul>
+
+    <script>
+      const id = document.querySelectorAll("h1#title");
+      const p2 = document.querySelectorAll("p");
+      const cl = document.querySelectorAll("li.item");
+
+      id[0].style.backgroundColor = "red";
+      p2[0].style.backgroundColor = "green";
+      cl[2].style.backgroundColor = "blue";
+    </script>
+  </body>
+</html>

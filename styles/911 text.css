@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline-style: none;
+}
+
+body {
+  font-size: 10px;
+  word-break: break-all;
+}
+
+h1 {
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.p1 {
+  font-size: 1.4rem;
+  line-height: 1.75;
+  color: crimson;
+  letter-spacing: -0.23px;
+
+  /* 한줄 짜리 말줄임 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.p2 {
+  font-size: 1.4rem;
+  line-height: 1.75;
+  color: crimson;
+  letter-spacing: -0.23px;
+
+  /* 여러줄 말줄임 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+span {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+ul,
+li {
+  font-size: 2rem;
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
