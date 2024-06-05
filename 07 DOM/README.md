@@ -75,3 +75,94 @@
   </script>
 </body>
 ```
+
+## 6.4 DOM 노드
+
+- DOM 트리의 가장 기본이되는 HTML 요소, 속성, 텍스트 등은 모두 노드(node)에 속한다.
+
+### 6.4.1 노드의 종류
+
+- 요소 노드(element node)
+- 속성 노드(attribute node)
+- 텍스트 노드(text node)
+- 문서 노드(document node)
+- 주석 노드(comment node)
+- DOM 트리의 최상위 : root node
+
+### 6.4.2 노드 추가하기
+
+```html
+<body>
+  <div id="box">
+    <p>단락1</p>
+    <p>단락2</p>
+  </div>
+
+  <script>
+    const elem = document.createElement("p");
+    const textNode = document.createTextNode("새로운 단락!");
+
+    elem.appendChild(textNode);
+    document.getElementById("box").appendChild(elem);
+  </script>
+</body>
+```
+
+### 6.4.3 노드 삽입하기
+
+```html
+<body>
+  <div id="box">
+    <p id="p1">단락1</p>
+    <p id="p2">단락2</p>
+  </div>
+
+  <script>
+    const elem = document.createElement("p");
+    const textNode = document.createTextNode("새로운 단락!");
+    elem.appendChild(textNode);
+
+    const p2 = document.getElementById("p2");
+    document.getElementById("box").insertBefore(elem, p2);
+  </script>
+</body>
+```
+
+### 6.4.4 노드 삭제하기
+
+```html
+<body>
+  <div id="box">
+    <p id="p1">단락1</p>
+    <p id="p2">단락2</p>
+    <p id="p3">단락3</p>
+  </div>
+
+  <script>
+    const elem = document.getElementById("p2");
+
+    elem.remove();
+  </script>
+</body>
+```
+
+### 6.4.5 노드 변경하기
+
+```html
+<body>
+  <div id="box">
+    <p id="p1">단락1</p>
+    <p id="p2">단락2</p>
+    <p id="p3">단락3</p>
+  </div>
+
+  <script>
+    const elem = document.createElement("p");
+    const textNode = document.createTextNode("노드 변경하기");
+    elem.appendChild(textNode);
+
+    const p1 = document.getElementById("p1");
+    document.getElementById("box").replaceChild(elem, p1);
+  </script>
+</body>
+```

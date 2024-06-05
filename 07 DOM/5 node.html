@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM node</title>
+  </head>
+  <body>
+    <div id="box">
+      <p id="p1">단락1</p>
+      <p id="p2">단락2</p>
+      <p id="p3">단락3</p>
+      
+    </div>
+
+    <script>
+      const elem = document.createElement("p");
+      const textNode = document.createTextNode("노드 변경하기");
+      elem.appendChild(textNode);
+
+      const p1 = document.getElementById("p1");
+      document.getElementById("box").replaceChild(elem, p1);
+    </script>
+  </body>
+</html>

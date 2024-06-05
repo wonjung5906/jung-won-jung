@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 핸들러</title>
+  </head>
+  <body>
+    <button id="btn">클릭하세요!</button>
+    <p id="show"></p>
+
+    <script>
+      let text = "";
+
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        text += `안녕하세요!<br>`;
+        document.getElementById("show").innerHTML = text;
+      });
+
+      btn.addEventListener("click", () => {
+        text += `반갑습니다!<br>`;
+        document.getElementById("show").innerHTML = text;
+      });
+    </script>
+  </body>
+</html>
